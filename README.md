@@ -3,7 +3,6 @@ Markdown
 
 ![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.6-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 API desenvolvida em **Java 21 + Spring Boot** para análise de elegibilidade de clientes em diferentes modalidades de empréstimos.
@@ -139,16 +138,6 @@ cd loans
 ➡️ **API disponível em | API available at:**  
 `http://localhost:8080/customer-loans`
 
-📖 **Documentação Interativa (Swagger) | Interactive Documentation:**  
-Seu projeto possui a dependência do Springdoc, então você pode testar ao vivo acessando:  
-`http://localhost:8080/swagger-ui.html`
-
-### 🧪 Executar testes | Run tests
-
-```bash
-# Executa os testes automatizados | Run automated tests
-./mvnw test
-```
 
 ## 📂 Estrutura | Project Structure
 
@@ -179,8 +168,8 @@ src
 ```
 
 ## 🧑‍💻 Autor | Author
-Desenvolvido por | Developed by **Francisco Montalvao** 🚀
+Desenvolvido por | Developed by **Francisco Flores Montalvao** 🚀
 
-## 🏛️ Licença | License
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Francisco-Montalvao)
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.  
 This project is under the MIT license. See the LICENSE file for more details.
