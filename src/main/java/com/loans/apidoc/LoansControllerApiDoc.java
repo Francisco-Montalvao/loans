@@ -1,4 +1,4 @@
-package com.loans;
+package com.loans.apidoc;
 
 
 import com.loans.dto.request.RequestCustomerDTO;

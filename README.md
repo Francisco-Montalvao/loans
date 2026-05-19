@@ -203,6 +203,8 @@ src
     ├── java
     │   └── com
     │       └── loans
+dit     │           ├── apidoc
+    │           │   └── LoansControllerApiDoc.java
     │           ├── controller
     │           │   └── CustomerController.java
     │           ├── dto
@@ -218,8 +220,7 @@ src
     │           │   └── Loan.java
     │           ├── service
     │           │   └── LoanService.java
-    │           ├── LoansApplication.java
-    │           └── LoansControllerApiDoc.java
+    │           └── LoansApplication.java
     └── resources
         └── application.properties
 ```

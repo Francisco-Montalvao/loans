@@ -1,6 +1,6 @@
 package com.loans.controller;
 
-import com.loans.LoansControllerApiDoc;
+import com.loans.apidoc.LoansControllerApiDoc;
 import com.loans.dto.request.RequestCustomerDTO;
 import com.loans.dto.response.ResponseCustomerDTO;
 import com.loans.service.LoanService;
