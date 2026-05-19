@@ -168,7 +168,7 @@ src
 ```
 
 ## 🧑‍💻 Autor | Author
-Desenvolvido por | Developed by **Francisco Flores Montalvao** 🚀
+Desenvolvido por | Developed by **Francisco Montalvao** 🚀
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Francisco-Montalvao)
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.  
