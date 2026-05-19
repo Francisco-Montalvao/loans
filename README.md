@@ -17,6 +17,8 @@ API built with **Java 21 + Spring Boot** to evaluate customers' eligibility for 
 - [Tecnologias](#-tecnologias--technologies)
 - [Descrição](#-descrição--description)
 - [Modalidades e Regras](#-modalidades--loan-types)
+- [Regras de negócio](#-regras-de-negócio--business-rules)
+- [Validações e Exceções](#-validações-e-tratamento-de-exceções--validations--exception-handling)
 - [Endpoints](#-endpoints)
 - [Como Executar](#-como-executar--how-to-run)
 - [Estrutura do Projeto](#-estrutura--project-structure)
@@ -79,6 +81,35 @@ The goal is to create an API that determines which loan types a customer is elig
 
 ---
 
+## 🛡️ Validações e Tratamento de Exceções | Validations & Exception Handling
+
+A API conta com validação estruturada dos dados de entrada, garantindo a integridade da requisição. Caso ocorram erros, um `GlobalExceptionHandler` intercepta e retorna respostas claras.
+
+### Regras de Validação | Validation Rules
+- **Nome (`name`)**: Obrigatório e tamanho entre 2 e 100 caracteres.
+- **Idade (`age`)**: Obrigatória e deve estar entre 18 e 100 anos.
+- **CPF (`cpf`)**: Obrigatório e deve possuir formato válido (com ou sem pontuação).
+- **Renda (`income`)**: Obrigatória e deve ser um valor positivo.
+- **Localização (`location`)**: Obrigatória e deve ter exatamente 2 caracteres (Ex: `SP`).
+
+### Exemplo de Erro | Error Response Example (400 Bad Request)
+
+```json
+{
+  "status": 400,
+  "timestamp": "2026-05-19T12:00:00.000",
+  "mensagem": "Erro de validacao em campos",
+  "Erros": [
+    {
+      "campo": "age",
+      "mensagem": "Age should not be less than 18"
+    }
+  ]
+}
+```
+
+---
+
 ## 📑 Endpoints
 
 ### 🔸 [POST] `/customer-loans`
@@ -133,6 +164,28 @@ cd loans
 
 # Execute o projeto | Run the project
 ./mvnw spring-boot:run
+```
+
+### 🐳 Executar via Docker | Run via Docker
+Se não tiver o Java instalado, você pode rodar o projeto utilizando o Docker (If you don't have Java installed, you can use Docker):
+```bash
+# Faça o build da imagem | Build the image
+docker build -t customer-loans-api .
+
+# Rode o container | Run the container
+docker run -p 8080:8080 customer-loans-api
+```
+
+### 🛑 Parar o Docker | Stop Docker
+Para parar a aplicação (To stop the application):
+- Se estiver vendo os logs no terminal, aperte `Ctrl + C` (If viewing logs, press `Ctrl + C`).
+- Ou, em outro terminal, encontre o ID e pare (Or, in another terminal, find the ID and stop it):
+```bash
+# Listar os containers rodando | List running containers
+docker ps
+
+# Parar o container | Stop the container
+docker stop <CONTAINER_ID>
 ```
 
 ➡️ **API disponível em | API available at:**  

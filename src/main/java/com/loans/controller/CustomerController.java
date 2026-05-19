@@ -1,17 +1,17 @@
 package com.loans.controller;
 
+import com.loans.LoansControllerApiDoc;
 import com.loans.dto.request.RequestCustomerDTO;
 import com.loans.dto.response.ResponseCustomerDTO;
 import com.loans.service.LoanService;
-import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class CustomerController {
+@RequestMapping("/customer-loans")
+public class CustomerController implements LoansControllerApiDoc {
 
     private final LoanService service;
 
@@ -20,9 +20,9 @@ public class CustomerController {
 
     }
 
-    @PostMapping("/customer-loans")
-    public ResponseEntity<ResponseCustomerDTO> responseLoans (@Valid @RequestBody RequestCustomerDTO dto){
-        ResponseCustomerDTO res = service.loans(dto);
-        return  ResponseEntity.ok(res);
+    @Override
+    public ResponseEntity<ResponseCustomerDTO> responseLoans(RequestCustomerDTO dto) {
+        ResponseCustomerDTO response = service.loans(dto);
+        return  ResponseEntity.ok(response);
     }
 }
